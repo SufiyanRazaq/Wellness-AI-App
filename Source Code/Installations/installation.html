@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wellness AI Coach App - Documentation</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.8;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+            color: #333;
+        }
+        .container {
+            max-width: 850px;
+            margin: auto;
+            background: #fff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+        h1, h2, h3 {
+            color: #222;
+            text-align: center;
+        }
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+        p {
+            color: #555;
+            font-size: 1.1em;
+        }
+        ul {
+            padding-left: 20px;
+        }
+        ul li {
+            margin-bottom: 10px;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            margin: 20px 0;
+            transition: transform 0.3s ease;
+        }
+        img:hover {
+            transform: scale(1.05);
+        }
+        code {
+            background-color: #f4f4f4;
+            border-left: 5px solid #3498db;
+            color: #333;
+            display: block;
+            padding: 10px;
+            margin: 20px 0;
+            border-radius: 5px;
+        }
+        .tabs {
+            display: flex;
+            justify-content: space-around;
+            background: #3498db;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            margin-bottom: 30px;
+        }
+        .tab {
+            flex: 1;
+            text-align: center;
+            padding: 15px;
+            background: #3498db;
+            color: #fff;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+        .tab:hover {
+            background: #2980b9;
+        }
+        .tab.active {
+            background: #2980b9;
+            font-weight: bold;
+        }
+        .tab-content {
+            display: none;
+            padding: 20px;
+            background: #fff;
+        }
+        .tab-content.active {
+            display: block;
+        }
+        .step {
+            background: #e8f7ff;
+            border-left: 5px solid #3498db;
+            padding: 20px;
+            border-radius: 5px;
+            margin: 20px 0;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+        }
+        .step h3 {
+            margin-top: 0;
+        }
+        a {
+            color: #3498db;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        a:hover {
+            color: #2980b9;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Wellness AI Coach App - Documentation</h1>
+        <p>Thank you for downloading the Wellness AI Coach App. This documentation will guide you through the process of setting up the frontend of the application, ensuring you can run and test it locally with ease.</p>
+
+        <div class="tabs">
+            <div class="tab active" onclick="showTab('flutter')">Flutter Installation & Setup</div>
+            <div class="tab" onclick="showTab('running')">Running the App</div>
+        </div>
+
+        <div id="flutter" class="tab-content active">
+            <h2>1. Installation Requirements</h2>
+            <p>To ensure smooth operation, make sure you have the following setup:</p>
+            <ul>
+                <li>Flutter SDK</li>
+                <li>Dart SDK</li>
+                <li>Android Studio or Visual Studio Code</li>
+                <li>Android Emulator or Physical Device</li>
+            </ul>
+
+            <h2>2. Downloading and Installing Flutter</h2>
+            <p>Follow the official guide to install Flutter on your system:</p>
+            <a href="https://flutter.dev/docs/get-started/install">Flutter Installation Guide</a>
+        </div>
+
+        <div id="running" class="tab-content">
+            <div class="step">
+                <h3>Step 1: Clone or download the project</h3>
+                <p>Access the project files from the provided source or download the compressed package and extract it to your local machine.</p>
+            </div>
+
+            <div class="step">
+                <h3>Step 2: Install dependencies</h3>
+                <p>Open the terminal in your IDE and run the following command to install all the required dependencies:</p>
+                <code>flutter pub get</code>
+            </div>
+
+            <div class="step">
+                <h3>Step 3: Run the App</h3>
+                <p>Connect an emulator or physical device and launch the app using:</p>
+                <code>flutter run</code>
+            </div>
+        </div>
+
+        <h2>Support</h2>
+        <p>If you encounter any issues or require further assistance, please reach out to our support team at <a href="mailto:sufiyanrazaq55@gmail.com">sufiyanrazaq55@gmail.com</a>.</p>
+    </div>
+
+    <script>
+        function showTab(tabId) {
+            // Hide all tab contents
+            const tabs = document.querySelectorAll('.tab-content');
+            tabs.forEach(tab => tab.classList.remove('active'));
+
+            // Remove active class from all tab headers
+            const tabHeaders = document.querySelectorAll('.tab');
+            tabHeaders.forEach(tabHeader => tabHeader.classList.remove('active'));
+
+            // Show the selected tab content and activate the corresponding tab header
+            document.getElementById(tabId).classList.add('active');
+            document.querySelector(`.tab[onclick="showTab('${tabId}')"]`).classList.add('active');
+        }
+    </script>
+</body>
+</html>
